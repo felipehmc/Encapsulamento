@@ -3,29 +3,26 @@ package time;
 public class Time {
     private int hour;
     private int minute;
-    public void putHour(int h){
-        hour = h;
-    }
-    public void putMinute(int m){
-        minute = m;
-    }
-    public int getHour(){
-        return hour;
+    public void putHourMinute(int h, int m){
+        if(h>=0 && h<=24 && m>=10 && m<=59){
+            hour = h;
+            minute = m;
+            System.out.println("The time now is "+h+":"+m);
+        }
+        else if(h>=0 && h<=24 && m>=0 && m<=9){
+            hour = h;
+            minute = m;
+            System.out.println("The time now is "+h+":0"+m);
+        }
+        else System.out.println("Nao existe tal horario");
     }
     public int getMinute(){
         return minute;
     }
-    /*Time(int h, int m){
-        hour = h;
-        minute = m;
-    };*/
     Time(){};
     public static void main(String[] args) {
-        //Time T = new Time(3,25);
         Time T = new Time();
-        T.putHour(6);
-        T.putMinute(28);
-        System.out.println("The time now is "+T.getHour()+":"+T.getMinute());
+        T.putHourMinute(3,2);
     }
     
 }
