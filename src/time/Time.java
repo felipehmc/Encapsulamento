@@ -23,8 +23,8 @@ public class Time {
     public static void main(String[] args) {
         //Time T = new Time(3,25);
         Time T = new Time();
-        T.putHour(3);
-        T.putMinute(25);
+        T.putHour(6);
+        T.putMinute(28);
         System.out.println("The time now is "+T.getHour()+":"+T.getMinute());
     }
     
